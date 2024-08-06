@@ -11,15 +11,15 @@ Amazon EKS is Kubernetes management service.
 
  EKS also have multi master node setup.
 
- control plane:
+- control plane:
 
  In Master node of Kubernetes there are differents program run (Kube-schedular, KubeAPI, etcd) which control the kubernetes cluster nodes is termed as 'Control plane'.
 
- Master Node:
+  Master Node:
 
  Amazon EKS the master node is fully managed by aws cloud .
 
- worker node:
+-  worker node:
 
  The worker node is not fully managed by aws.
 
