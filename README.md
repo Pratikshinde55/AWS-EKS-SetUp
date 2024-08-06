@@ -15,7 +15,7 @@ Amazon EKS is Kubernetes management service.
 
  In Master node of Kubernetes there are differents program run (Kube-schedular, KubeAPI, etcd) which control the kubernetes cluster nodes is termed as 'Control plane'.
 
-  Master Node:
+ - Master Node:
 
  Amazon EKS the master node is fully managed by aws cloud .
 
