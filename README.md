@@ -81,3 +81,9 @@ paste access key of IAM user:
 ![image](https://github.com/user-attachments/assets/5809837a-b043-4564-9521-06d81cbd5d90)
 
 
+# Step 3: (Download eksctl tool)
+
+Search on browser "eksctl" open link and right side of link give GitHub repo link click ,
+
+![Screenshot 2024-08-06 175713](https://github.com/user-attachments/assets/ab03f6fb-8236-445c-89ae-dc47e9844472)
+
