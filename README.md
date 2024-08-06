@@ -119,7 +119,3 @@ Now on command prompt/ GitBash we can check by using command :
 
 Search on browser 'kubectl install window' -->> 'Install kubectl binary with curl on Windows '  -->> copy command and paste on local system .
 
-(link- https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/ )
-
-     # curl.exe -LO "https://dl.k8s.io/release/v1.30.0/bin/windows/amd64/kubectl.exe"
-
