@@ -30,9 +30,9 @@ we can create EKS cluster :-
  2. terraForm
  3. eksctl
 
+![Screenshot 2024-08-06 173007](https://github.com/user-attachments/assets/7bf66c1f-c926-4cdf-b680-2faf1e626732)
 
-
-# SetUp
+-  SetUp:
 
 we use "eksctl" to create eks cluster we need following things:
  1. AWS cli (on local laptop for aws Authentication)
