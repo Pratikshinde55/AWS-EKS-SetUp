@@ -91,3 +91,8 @@ Now on GitHub there is option -->> "Release" click: (Download:- eksctl window am
 
 ![image](https://github.com/user-attachments/assets/d823fc7d-b54e-434f-82ae-f40199d2523c)
 
+- Note:
+
+  After Download eksctl tool we extract because we download zip file .
+
+  
