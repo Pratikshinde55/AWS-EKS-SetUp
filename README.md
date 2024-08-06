@@ -23,5 +23,17 @@ Amazon EKS is Kubernetes management service.
 
  The worker node is not fully managed by aws.
 
+
+Setup -
+
+- Note:
+
+we can create EKS cluster :-
+ 1. webUI
+ 2. terraForm
+ 3. eksctl
+
+
+    
  
  
