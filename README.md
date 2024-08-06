@@ -87,3 +87,7 @@ Search on browser "eksctl" open link and right side of link give GitHub repo lin
 
 ![Screenshot 2024-08-06 175713](https://github.com/user-attachments/assets/ab03f6fb-8236-445c-89ae-dc47e9844472)
 
+Now on GitHub there is option -->> "Release" click: (Download:- eksctl window amd64.zip)
+
+![image](https://github.com/user-attachments/assets/d823fc7d-b54e-434f-82ae-f40199d2523c)
+
