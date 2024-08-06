@@ -23,9 +23,6 @@ Amazon EKS is Kubernetes management service.
 
  The worker node is not fully managed by aws.
 
-
-Setup -
-
 - Note:
 
 we can create EKS cluster :-
@@ -34,6 +31,15 @@ we can create EKS cluster :-
  3. eksctl
 
 
+
+# SetUp
+
+we use "eksctl" to create eks cluster we need following things:
+ 1. AWS cli (on local laptop for aws Authentication)
+ 2. IAM user (Create IAM user to access AWS EKS)
+ 3. eksctl tool on local machine(Create Eks cluster).
+ 4. kubectl tool on local machine(Do work inside cluster).
+ 
     
  
  
