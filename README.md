@@ -66,7 +66,18 @@ Retrieve access key:
 ![Screenshot 2024-08-06 173818](https://github.com/user-attachments/assets/5a4925c5-abf9-4af8-86d5-6c2098ff0b21)
 
 
+# Step 2: (AWS CLI on local laptpton/ Authentication)
 
+Search on google -->> "aws cli install window" -->> download AWS CLI for window (64-bit)
 
+on command prompt/ GitBash
+
+    #  aws --version
+
+paste access key of IAM user:
+
+    # aws configure
+
+![image](https://github.com/user-attachments/assets/5809837a-b043-4564-9521-06d81cbd5d90)
 
 
