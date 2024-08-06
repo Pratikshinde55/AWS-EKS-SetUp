@@ -107,3 +107,16 @@ Now on command prompt/ GitBash we can check by using command :
     # eksctl
     # eksctl version
   
+![image](https://github.com/user-attachments/assets/ad8304c4-65ce-442f-87e6-923db56edd57)
+
+- Note:
+
+"eksctl" command for only create and delete cluster but not for doing cluster inside activities or for worker node.
+
+# Step 4: (Download Kubectl on loptop)
+
+Search on browser 'kubectl install window' -->> 'Install kubectl binary with curl on Windows '  -->> copy command and paste on local system .
+
+
+     # curl.exe -LO "https://dl.k8s.io/release/v1.30.0/bin/windows/amd64/kubectl.exe"
+
