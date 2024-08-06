@@ -1,4 +1,3 @@
-# AWS-EKS-SetUp
 
 kubernetes is Container cluster management tool.
 
