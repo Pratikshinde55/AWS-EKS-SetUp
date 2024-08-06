@@ -95,4 +95,11 @@ Now on GitHub there is option -->> "Release" click: (Download:- eksctl window am
 
   After Download eksctl tool we extract because we download zip file .
 
+  After extract eksctl tool we need to add path of eksctl tool to system -->>"Edit environment variable"
+
+ Go to "User variable for__"  --> click "path" -->> Click "Edit"  and here path for extracted eksctl tool location:
+
+ ![image](https://github.com/user-attachments/assets/c0d7a1ef-cf20-4343-9899-460ded63d20e)
+
+
   
