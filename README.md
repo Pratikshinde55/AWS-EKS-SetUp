@@ -85,6 +85,8 @@ paste access key of IAM user:
 
 Search on browser "eksctl" open link and right side of link give GitHub repo link click ,
 
+(link- https://github.com/eksctl-io/eksctl/releases/tag/v0.188.0)
+
 ![Screenshot 2024-08-06 175713](https://github.com/user-attachments/assets/ab03f6fb-8236-445c-89ae-dc47e9844472)
 
 Now on GitHub there is option -->> "Release" click: (Download:- eksctl window amd64.zip)
@@ -117,6 +119,7 @@ Now on command prompt/ GitBash we can check by using command :
 
 Search on browser 'kubectl install window' -->> 'Install kubectl binary with curl on Windows '  -->> copy command and paste on local system .
 
+(link- https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/ )
 
      # curl.exe -LO "https://dl.k8s.io/release/v1.30.0/bin/windows/amd64/kubectl.exe"
 
