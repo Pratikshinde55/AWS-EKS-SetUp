@@ -156,3 +156,11 @@ our EC2 worker node also created:
 
 ![image](https://github.com/user-attachments/assets/93329b63-22e9-48e2-b78e-24a421ec309f)
 
+
+Here for worker node our local laptop key is added because we use  "--ssh-access" 
+
+![Screenshot 2024-08-07 111041](https://github.com/user-attachments/assets/5a489355-5513-469a-8611-aa0e092d5e88)
+
+![Screenshot 2024-08-07 111122](https://github.com/user-attachments/assets/e497de17-2078-42df-b9d0-ae29fedd7ce3)
+
+
