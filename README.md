@@ -119,3 +119,24 @@ Now on command prompt/ GitBash we can check by using command :
 
 Search on browser 'kubectl install window' -->> 'Install kubectl binary with curl on Windows '  -->> copy command and paste on local system .
 
+(link-https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/ )
+
+
+    #  curl.exe -LO "https://dl.k8s.io/release/v1.30.0/bin/windows/amd64/kubectl.exe"
+
+
+
+
+# Step 5: (Create EKS Cluster)
+
+For creating Cluster we use "eksctl" command and for doing anything inside cluster we use "kubectl" command.
+
+Create kubernetes cluster we use help command for showing option:
+
+    # eksctl create cluster --help
+
+
+Now create cluster using option:
+
+    # eksctl create cluster  --name pscluster  --region ap-south-1  --version 1.30  --nodegroup-name psnodegp  --nodes 3 
+      --nodes-min 3  --nodes-max 6  --node-volume-size 8  --node-volume-type gp3  --ssh-access   --enable-ssm --instance-name psworkernode  --managed
