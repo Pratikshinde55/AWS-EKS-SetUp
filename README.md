@@ -151,3 +151,8 @@ now check on aws console our cluster creates:
 
 ![image](https://github.com/user-attachments/assets/97a80377-8dd3-4ff7-9ab0-04b2d3d5fe56)
 
+
+our EC2 worker node also created:
+
+![image](https://github.com/user-attachments/assets/93329b63-22e9-48e2-b78e-24a421ec309f)
+
