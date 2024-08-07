@@ -138,5 +138,5 @@ Create kubernetes cluster we use help command for showing option:
 
 Now create cluster using option:
 
-    # eksctl create cluster  --name pscluster  --region ap-south-1  --version 1.30  --nodegroup-name psnodegp  --nodes 3 
+      eksctl create cluster  --name pscluster  --region ap-south-1  --version 1.30  --nodegroup-name psnodegp  --nodes 3 
       --nodes-min 3  --nodes-max 6  --node-volume-size 8  --node-volume-type gp3  --ssh-access   --enable-ssm --instance-name psworkernode  --managed
