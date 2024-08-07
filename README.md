@@ -35,15 +35,17 @@ we can create EKS cluster :-
 -  SetUp:
 
 we use "eksctl" to create eks cluster we need following things:
- 1. AWS cli (on local laptop for aws Authentication)
- 2. IAM user (Create IAM user to access AWS EKS)
+ 1. IAM user (Create IAM user to access AWS EKS)
+ 2. AWS cli (on local laptop for aws Authentication)
  3. eksctl tool on local machine(Create Eks cluster).
  4. kubectl tool on local machine(Do work inside cluster).
+ 5. eksctl create cluster (Create cluster from local laptop).
+ 6. AWS Console check(Cluster is created checking on aws console-->>EKS)
  
     
 # Step 1: (Create IAM user on aws)
 
- Go to aws console and create IAM user which is used for Authentication 
+ Go to aws console and create IAM user which is used for Authentication:
 
  ![Screenshot 2024-08-06 173532](https://github.com/user-attachments/assets/154dc5ed-359e-4cef-b7d1-60b22f2080f4)
 
@@ -51,17 +53,17 @@ Now attach policy and create new user:
 
 ![Screenshot 2024-08-06 173631](https://github.com/user-attachments/assets/2cffdb97-a6f4-4485-be21-9fedf99d9bd7)
 
-Now click on created user 
+Now click on created user:
 
 ![Screenshot 2024-08-06 173654](https://github.com/user-attachments/assets/013a3297-fbae-45b5-be09-87ef0e5f23c0)
 
-Now click " security credentials" and creare access key
+Now click " security credentials" and creare access key:
 
 ![Screenshot 2024-08-06 173727](https://github.com/user-attachments/assets/5a5c7c92-c5f3-435e-b498-5774cf4e3cc9)
 
 ![Screenshot 2024-08-06 173751](https://github.com/user-attachments/assets/4d92bc58-e998-4961-8852-62413dc336bb)
 
-Retrieve access key:
+we get Retrieve access key:
 
 ![Screenshot 2024-08-06 173818](https://github.com/user-attachments/assets/5a4925c5-abf9-4af8-86d5-6c2098ff0b21)
 
@@ -80,7 +82,10 @@ paste access key of IAM user:
 
 ![image](https://github.com/user-attachments/assets/5809837a-b043-4564-9521-06d81cbd5d90)
 
+- Note :
 
+  This aws cli tool help us to connect with aws and use aws services from laptop/Local machine.
+  
 # Step 3: (Download eksctl tool)
 
 Search on browser "eksctl" open link and right side of link give GitHub repo link click ,
@@ -114,6 +119,9 @@ Now on command prompt/ GitBash we can check by using command :
 - Note:
 
 "eksctl" command for only create and delete cluster but not for doing cluster inside activities or for worker node.
+
+"eksctl" tool helps to connect with master through "kubeAPI" but we Master node is fully managed by aws.
+
 
 # Step 4: (Download Kubectl on loptop)
 
@@ -169,7 +177,7 @@ Here for worker node our local laptop Public key is attached because we use  "--
 
 # Step 7: (Create pod)
 
-If we want to launch OS, Server< App then that entire Software we bundle in one box or software called as "Image"  and that image in Container world called as "Container Image".
+If we want to launch OS, Server, App then that entire Software we bundle in one box or software called as "Image"  and that image in Container world called as "Container Image".
 
 If we want to launch app/container/pod with help of image we use term as "deployment" in K8S world.
 
@@ -195,10 +203,11 @@ If we want to launch app/container/pod with help of image we use term as "deploy
 
  - Note:
 
-  Master node keeps on monitoring "pod" because there is a program running in "worker node" who communicates with master that program is known as "kubelet", This is also managed by EKS.
+  Master node keeps on monitoring "pod" because there is a program running in "worker node" who communicates with master that program is known as "kubelet", 
+  This is also managed by EKS.
 
-  If we delete pod or any fault occur and pod goes down then , Master node automatically launch same pod at any node , any node means master kube-schedular program keep on monitoring on worker node which 
-  is free that node master lanuch pod.
+  If we delete pod or any fault occur and pod goes down then , Master node automatically launch same pod at any node , any node means master kube-schedular program keep 
+  on monitoring on worker node which is free that node master lanuch pod.
 
   ![image](https://github.com/user-attachments/assets/8e9ac95d-d0b9-4162-9870-fd033a096589)
 
