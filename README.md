@@ -72,13 +72,13 @@ we get Retrieve access key:
 
 Search on google -->> "aws cli install window" -->> download AWS CLI for window (64-bit)
 
-on command prompt/ GitBash
+command for checking aws cli work on prompt/ GitBash:
 
-    #  aws --version
+       aws --version
 
 paste access key of IAM user:
 
-    # aws configure
+      aws configure
 
 ![image](https://github.com/user-attachments/assets/5809837a-b043-4564-9521-06d81cbd5d90)
 
@@ -111,8 +111,8 @@ Now on GitHub there is option -->> "Release" click: (Download:- eksctl window am
 
 Now on command prompt/ GitBash we can check by using command :
 
-    # eksctl
-    # eksctl version
+      eksctl
+      eksctl version
   
 ![image](https://github.com/user-attachments/assets/ad8304c4-65ce-442f-87e6-923db56edd57)
 
@@ -130,7 +130,7 @@ Search on browser 'kubectl install window' -->> 'Install kubectl binary with cur
 (link-https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/ )
 
 
-    #  curl.exe -LO "https://dl.k8s.io/release/v1.30.0/bin/windows/amd64/kubectl.exe"
+       curl.exe -LO "https://dl.k8s.io/release/v1.30.0/bin/windows/amd64/kubectl.exe"
 
 
 
@@ -141,10 +141,10 @@ For creating Cluster we use "eksctl" command and for doing anything inside clust
 
 Create kubernetes cluster we use help command for showing option:
 
-    # eksctl create cluster --help
+      eksctl create cluster --help
 
 
-- Now create cluster using option:
+- Now create cluster using option command:
 
       eksctl create cluster  --name pscluster  --region ap-south-1  --version 1.30  --nodegroup-name psnodegp  --nodes 3 
       --nodes-min 3  --nodes-max 6  --node-volume-size 8  --node-volume-type gp3  --ssh-access   --enable-ssm --instance-name psworkernode  --managed
