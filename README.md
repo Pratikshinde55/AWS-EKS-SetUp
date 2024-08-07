@@ -136,7 +136,7 @@ Create kubernetes cluster we use help command for showing option:
     # eksctl create cluster --help
 
 
-Now create cluster using option:
+- Now create cluster using option:
 
       eksctl create cluster  --name pscluster  --region ap-south-1  --version 1.30  --nodegroup-name psnodegp  --nodes 3 
       --nodes-min 3  --nodes-max 6  --node-volume-size 8  --node-volume-type gp3  --ssh-access   --enable-ssm --instance-name psworkernode  --managed
@@ -157,10 +157,38 @@ our EC2 worker node also created:
 ![image](https://github.com/user-attachments/assets/93329b63-22e9-48e2-b78e-24a421ec309f)
 
 
-Here for worker node our local laptop key is added because we use  "--ssh-access" 
+Here for worker node our local laptop Public key is attached because we use  "--ssh-access" and i can access Cluster node instance from local machine and manage.
+
+    # ssh ec2-user@(Public_IP)
 
 ![Screenshot 2024-08-07 111041](https://github.com/user-attachments/assets/5a489355-5513-469a-8611-aa0e092d5e88)
 
 ![Screenshot 2024-08-07 111122](https://github.com/user-attachments/assets/e497de17-2078-42df-b9d0-ae29fedd7ce3)
 
 
+
+# Step 7: (Create pod)
+
+If we want to launch OS, Server< App then that entire Software we bundle in one box or software called as "Image"  and that image in Container world called as "Container Image".
+
+If we want to launch app/container/pod with help of image we use term as "deployment" in K8S world.
+
+
+     # kubectl create deployment psapp --image=vimal13/apache-webserver-php
+
+ we can check pods using kubectl command:
+
+     # kubectl get pods 
+     
+![image](https://github.com/user-attachments/assets/b4f836b2-97ec-4346-9cfd-a5d3ee6e78fa)
+
+
+ we can check entire info of pods:
+
+     # kubectl get pods -o wide
+
+ we can also direct connect to POD (Container) from laptop:
+
+     # kubectl exec -it psapp bash
+
+ 
