@@ -191,4 +191,15 @@ If we want to launch app/container/pod with help of image we use term as "deploy
 
      # kubectl exec -it psapp bash
 
- 
+
+
+ - Note:
+
+  Master node keeps on monitoring "pod" because there is a program running in "worker node" who communicates with master that program is known as "kubelet", This is also managed by EKS.
+
+  If we delete pod or any fault occur and pod goes down then , Master node automatically launch same pod at any node , any node means master kube-schedular program keep on monitoring on worker node which 
+  is free that node master lanuch pod.
+
+  ![image](https://github.com/user-attachments/assets/8e9ac95d-d0b9-4162-9870-fd033a096589)
+
+  
