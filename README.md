@@ -133,6 +133,7 @@ Search on browser 'kubectl install window' -->> 'Install kubectl binary with cur
        curl.exe -LO "https://dl.k8s.io/release/v1.30.0/bin/windows/amd64/kubectl.exe"
 
 
+![image](https://github.com/user-attachments/assets/3de88275-e6cd-4816-9890-45e82d4bccc6)
 
 
 # Step 5: (Create EKS Cluster)
