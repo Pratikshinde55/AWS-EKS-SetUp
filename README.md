@@ -181,23 +181,25 @@ If we want to launch OS, Server, App then that entire Software we bundle in one 
 
 If we want to launch app/container/pod with help of image we use term as "deployment" in K8S world.
 
+Command:
 
-     # kubectl create deployment psapp --image=vimal13/apache-webserver-php
+
+       kubectl create deployment psapp --image=vimal13/apache-webserver-php
 
  we can check pods using kubectl command:
 
-     # kubectl get pods 
+       kubectl get pods 
      
 ![image](https://github.com/user-attachments/assets/b4f836b2-97ec-4346-9cfd-a5d3ee6e78fa)
 
 
- we can check entire info of pods:
+ we can check entire info of pods using command:
 
-     # kubectl get pods -o wide
+       kubectl get pods -o wide
 
  we can also direct connect to POD (Container) from laptop:
 
-     # kubectl exec -it psapp bash
+       kubectl exec -it psapp bash
 
 
 
