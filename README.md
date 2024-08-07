@@ -202,4 +202,12 @@ If we want to launch app/container/pod with help of image we use term as "deploy
 
   ![image](https://github.com/user-attachments/assets/8e9ac95d-d0b9-4162-9870-fd033a096589)
 
+
+  # Step 8: (Delete entire cluster in one command)
+
+  AWS EKS master node all monitoring activity ,If we want delete entire cluster then we use only one following command:
+
   
+       #  eksctl delete cluster --name pscluster  --region ap-south-1
+
+![image](https://github.com/user-attachments/assets/9bc33310-8975-4384-af36-758ca140b460)
