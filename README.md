@@ -132,7 +132,11 @@ Search on browser 'kubectl install window' -->> 'Install kubectl binary with cur
 
        curl.exe -LO "https://dl.k8s.io/release/v1.30.0/bin/windows/amd64/kubectl.exe"
 
-
+we can check using command:
+    
+    
+      kubectl version
+      
 ![image](https://github.com/user-attachments/assets/3de88275-e6cd-4816-9890-45e82d4bccc6)
 
 
@@ -213,6 +217,12 @@ Command:
   on monitoring on worker node which is free that node master lanuch pod.
 
   ![image](https://github.com/user-attachments/assets/8e9ac95d-d0b9-4162-9870-fd033a096589)
+
+
+
+  # Step 8:(use Load balancer and access webapp from outside world)
+
+  
 
 
   # Step 8: (Delete entire cluster in one command)
