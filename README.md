@@ -158,28 +158,6 @@ Create kubernetes cluster we use help command for showing option:
  ![image](https://github.com/user-attachments/assets/0f768789-0ce9-42da-af07-fc83bdc153d4)
 
 
-# Step 6: (AWS console check)
-
-now check on aws console our cluster creates:
-
-![image](https://github.com/user-attachments/assets/97a80377-8dd3-4ff7-9ab0-04b2d3d5fe56)
-
-
-our EC2 worker node also created:
-
-![image](https://github.com/user-attachments/assets/93329b63-22e9-48e2-b78e-24a421ec309f)
-
-
-Here for worker node our local laptop Public key is attached because we use  "--ssh-access" and i can access Cluster node instance from local machine and manage.
-
-    # ssh ec2-user@(Public_IP)
-
-![Screenshot 2024-08-07 111041](https://github.com/user-attachments/assets/5a489355-5513-469a-8611-aa0e092d5e88)
-
-![Screenshot 2024-08-07 111122](https://github.com/user-attachments/assets/e497de17-2078-42df-b9d0-ae29fedd7ce3)
-
-
-
 # Step 7: (Create pod)
 
 If we want to launch OS, Server, App then that entire Software we bundle in one box or software called as "Image"  and that image in Container world called as "Container Image".
@@ -233,3 +211,25 @@ Command:
           eksctl delete cluster --name pscluster  --region ap-south-1
 
 ![image](https://github.com/user-attachments/assets/9bc33310-8975-4384-af36-758ca140b460)
+
+
+# Step 6: (AWS console check)
+
+now check on aws console our cluster creates:
+
+![image](https://github.com/user-attachments/assets/97a80377-8dd3-4ff7-9ab0-04b2d3d5fe56)
+
+
+our EC2 worker node also created:
+
+![image](https://github.com/user-attachments/assets/93329b63-22e9-48e2-b78e-24a421ec309f)
+
+
+Here for worker node our local laptop Public key is attached because we use  "--ssh-access" and i can access Cluster node instance from local machine and manage.
+
+    # ssh ec2-user@(Public_IP)
+
+![Screenshot 2024-08-07 111041](https://github.com/user-attachments/assets/5a489355-5513-469a-8611-aa0e092d5e88)
+
+![Screenshot 2024-08-07 111122](https://github.com/user-attachments/assets/e497de17-2078-42df-b9d0-ae29fedd7ce3)
+
