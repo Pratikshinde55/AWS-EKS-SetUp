@@ -209,8 +209,21 @@ Command:
     
          kubectl get svc
 
-  
+  ![image](https://github.com/user-attachments/assets/997d958f-fddb-4105-9888-8d3f8583e2a8)
 
+   Command for check create load balancer/expose deployment option:
+
+         kubectl expose deployment --help
+
+    Command for Create LB:
+
+         kubectl expose deployment psapp --name pslb --type=LoadBalancer --port 80
+
+    ![image](https://github.com/user-attachments/assets/2d468bb1-0de9-4adb-9065-da9919386bfa)
+
+    After creating load balancer we get "EXTERNAL-IP" that we can use as link on browser:
+    
+     
 
   # Step 8: (Delete entire cluster in one command)
 
