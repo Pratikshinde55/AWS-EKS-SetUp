@@ -88,6 +88,8 @@ paste access key of IAM user:
   
 # Step 3: (Download eksctl tool)
 
+eksctl is third party tool to manage EKS.
+
 Search on browser "eksctl" open link and right side of link give GitHub repo link click ,
 
 (link- https://github.com/eksctl-io/eksctl/releases/tag/v0.188.0)
