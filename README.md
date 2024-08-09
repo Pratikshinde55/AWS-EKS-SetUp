@@ -207,7 +207,7 @@ Command:
 
     Command for get Load Balancer list:
     
-       kubectl get svc
+         kubectl get svc
 
   
 
