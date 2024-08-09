@@ -3,7 +3,7 @@ kubernetes is Container cluster management tool.
 
  # Elastic Kubernetes Service(EKS):
 
-Amazon EKS is Kubernetes management service. 
+Amazon EKS is Kubernetes cluster management service. 
 
  Elastic Kubernetes Service(EKS) give fault tolerance(FT) means if something fail, Kubernetes master automatic launch Container.
 
