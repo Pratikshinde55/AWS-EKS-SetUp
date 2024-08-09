@@ -198,7 +198,16 @@ Command:
 
 
 
-  # Step 8:(use Load balancer and access webapp from outside world)
+  # Step 7:(use Load balancer and access webapp from outside world)
+
+  - Note:
+
+    Kubernetes have their own load balancer, but if we want to use other load balancer then plugin need for "vanilla kubernetes" but for "amazon EKS" give precreated plugin for using
+    aws services like Load balancer.
+
+    Command for get Load Balancer list:
+    
+       kubectl get svc
 
   
 
