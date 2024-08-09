@@ -222,6 +222,8 @@ Command:
 
  After creating load balancer we get "EXTERNAL-IP" that we can use as link on browser:
 
+          kubectl get svc
+
 - Note:
      
 Kubernetes give us fantastic option that "Scale", by using horizontal Scaling we can scale-out and scale-in our deployment:
@@ -236,6 +238,20 @@ we can also see on which "node" our pod from CLI:
 
 ![image](https://github.com/user-attachments/assets/6169c8c3-390a-4df8-a463-b102976c0e69)
        
+we can see our Elastic Load balancer "EXTERNAL-IP" to access our psapp(pod/container):
+
+Paste "EXTERNAL-IP" that get from "kubectl get svc" command and we access our psapp through loadBalancer:
+
+- Note:
+
+   From below screenshoot we can see that our load balancer work, every time we connect new pod: 
+
+![image](https://github.com/user-attachments/assets/370e8407-98d7-416a-bfbb-90e83f172d95)
+
+![image](https://github.com/user-attachments/assets/9620f945-6bad-4045-bb85-c3bdb8b75bee)
+
+![image](https://github.com/user-attachments/assets/6cb0c55e-7844-4c54-acdc-ea125167ee14)
+
 
   # Step 8: (Delete entire cluster in one command)
 
