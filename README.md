@@ -289,7 +289,11 @@ Here for worker node our local laptop Public key is attached because we use  "--
 
 ![image](https://github.com/user-attachments/assets/58e25c91-309f-4a82-84d1-5ed13acd3e0f)
 
-- VPC also created by EKS automatic(VPC give IP range subnet for our node,pod)
+- VPC also created by EKS automatic(VPC give IP range subnet for our node,pod):
+
+  AWS has its own personal plugin called "VPC" that is used for K8S by EKS.
+
+  every VPC has subnets and every subnet gives IP adress range.
 
 ![image](https://github.com/user-attachments/assets/98a080c8-4a88-4360-b1cc-a3c91ad0467a)
 
