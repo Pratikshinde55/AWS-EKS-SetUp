@@ -155,10 +155,10 @@ Create kubernetes cluster we use help command for showing option:
        --node-volume-size 8  --node-volume-type gp3  --ssh-access   --enable-ssm --instance-name psworkernode  --managed
 
 
- ![image](https://github.com/user-attachments/assets/0f768789-0ce9-42da-af07-fc83bdc153d4)
+![image](https://github.com/user-attachments/assets/f081c271-e3bc-467a-ab9b-e33d7d6247d6)
 
 
-# Step 7: (Create pod)
+# Step 6: (Create pod)
 
 If we want to launch OS, Server, App then that entire Software we bundle in one box or software called as "Image"  and that image in Container world called as "Container Image".
 
