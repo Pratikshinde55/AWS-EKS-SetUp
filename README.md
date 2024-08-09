@@ -266,7 +266,7 @@ now check on aws console our cluster creates: aws Dashbord-->> EKS
 
 EC2 worker node also created:
 
- -Note:
+  - Note:
 
   Here we can see that our instances lanuch at different " availability zones" because we use "nodegroup" while creating Cluster, EKS is very intelligent, every node launch in differnt AZ 
   because i any AZ goes down then our other AZ our app work:
@@ -280,7 +280,8 @@ Here for worker node our local laptop Public key is attached because we use  "--
 
 ![Screenshot 2024-08-07 111041](https://github.com/user-attachments/assets/5a489355-5513-469a-8611-aa0e092d5e88)
 
-![Screenshot 2024-08-07 111122](https://github.com/user-attachments/assets/e497de17-2078-42df-b9d0-ae29fedd7ce3)
+![image](https://github.com/user-attachments/assets/d1de79b5-565b-45fd-82bd-ab4c26c3369e)
+
 
 
 
