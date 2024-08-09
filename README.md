@@ -197,31 +197,30 @@ Command:
   ![image](https://github.com/user-attachments/assets/8e9ac95d-d0b9-4162-9870-fd033a096589)
 
 
-
-  # Step 7:(use Load balancer and access webapp from outside world)
+# Step 7:(use Load balancer and access webapp from outside world)
 
   - Note:
 
     Kubernetes have their own load balancer, but if we want to use other load balancer then plugin need for "vanilla kubernetes" but for "amazon EKS" give precreated plugin for using
     aws services like Load balancer.
 
-    Command for get Load Balancer list:
+ Command for get Load Balancer list:
     
          kubectl get svc
 
   ![image](https://github.com/user-attachments/assets/997d958f-fddb-4105-9888-8d3f8583e2a8)
 
-   Command for check create load balancer/expose deployment option:
+ Command for check create load balancer/expose deployment option:
 
          kubectl expose deployment --help
 
-    Command for Create LB:
+ Command for Create LB:
 
          kubectl expose deployment psapp --name pslb --type=LoadBalancer --port 80
 
-    ![image](https://github.com/user-attachments/assets/2d468bb1-0de9-4adb-9065-da9919386bfa)
+ ![image](https://github.com/user-attachments/assets/2d468bb1-0de9-4adb-9065-da9919386bfa)
 
-    After creating load balancer we get "EXTERNAL-IP" that we can use as link on browser:
+ After creating load balancer we get "EXTERNAL-IP" that we can use as link on browser:
     
      
 
