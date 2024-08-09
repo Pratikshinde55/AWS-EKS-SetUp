@@ -221,8 +221,21 @@ Command:
  ![image](https://github.com/user-attachments/assets/2d468bb1-0de9-4adb-9065-da9919386bfa)
 
  After creating load balancer we get "EXTERNAL-IP" that we can use as link on browser:
-    
+
+- Note:
      
+Kubernetes give us fantastic option that "Scale", by using horizontal Scaling we can scale-out and scale-in our deployment:
+
+       kubectl scale deployment psapp --replicas=4
+       
+![image](https://github.com/user-attachments/assets/90ef6965-6e34-4e5f-8317-1c80a0d325df)
+
+we can also see on which "node" our pod from CLI:
+
+       kubectl get pods -o wide
+
+![image](https://github.com/user-attachments/assets/6169c8c3-390a-4df8-a463-b102976c0e69)
+       
 
   # Step 8: (Delete entire cluster in one command)
 
