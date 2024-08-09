@@ -158,7 +158,7 @@ Create kubernetes cluster we use help command for showing option:
 ![image](https://github.com/user-attachments/assets/f081c271-e3bc-467a-ab9b-e33d7d6247d6)
 
 
-# Step 6: (Create pod)
+# Step 6: (Create pod using docker image)
 
 If we want to launch OS, Server, App then that entire Software we bundle in one box or software called as "Image"  and that image in Container world called as "Container Image".
 
@@ -191,8 +191,8 @@ Command:
   Master node keeps on monitoring "pod" because there is a program running in "worker node" who communicates with master that program is known as "kubelet", 
   This is also managed by EKS.
 
-  If we delete pod or any fault occur and pod goes down then , Master node automatically launch same pod at any node , any node means master kube-schedular program keep 
-  on monitoring on worker node which is free that node master lanuch pod.
+  If we delete pod or any fault occures and pod goes down then Master node automatically launch same pod at any node, at any node means master kube-schedular program keep 
+  on monitoring on worker node which is free, that node use for launch pod.
 
   ![image](https://github.com/user-attachments/assets/8e9ac95d-d0b9-4162-9870-fd033a096589)
 
@@ -201,8 +201,8 @@ Command:
 
   - Note:
 
-    Kubernetes have their own load balancer, but if we want to use other load balancer then plugin need for "vanilla kubernetes" but for "amazon EKS" give precreated plugin for using
-    aws services like Load balancer.
+    Kubernetes have their own load balancer, but if we want to use other load balancer then plugin need for "vanilla kubernetes" but while using "amazon EKS" give precreated plugin for using
+    aws services like Load balancer(ELB).
 
  Command for get Load Balancer list:
     
@@ -252,27 +252,26 @@ Paste "EXTERNAL-IP" that get from "kubectl get svc" command and we access our ps
 
 ![image](https://github.com/user-attachments/assets/6cb0c55e-7844-4c54-acdc-ea125167ee14)
 
-
-  # Step 8: (Delete entire cluster in one command)
-
-  AWS EKS master node all monitoring activity ,If we want delete entire cluster then we use only one following command:
-
-  
-          eksctl delete cluster --name pscluster  --region ap-south-1
-
-![image](https://github.com/user-attachments/assets/9bc33310-8975-4384-af36-758ca140b460)
+![image](https://github.com/user-attachments/assets/da55b55e-01f7-4e8c-a0d6-144a261540d6)
 
 
-# Step 6: (AWS console check)
-
-now check on aws console our cluster creates:
-
-![image](https://github.com/user-attachments/assets/97a80377-8dd3-4ff7-9ab0-04b2d3d5fe56)
 
 
-our EC2 worker node also created:
+# Step 8: (AWS console check)
 
-![image](https://github.com/user-attachments/assets/93329b63-22e9-48e2-b78e-24a421ec309f)
+now check on aws console our cluster creates: aws Dashbord-->> EKS
+
+![image](https://github.com/user-attachments/assets/49c48de1-8b2c-4904-a9c3-a1a01182196a)
+
+
+EC2 worker node also created:
+
+ -Note:
+
+  Here we can see that our instances lanuch at different " availability zones" because we use "nodegroup" while creating Cluster, EKS is very intelligent, every node launch in differnt AZ 
+  because i any AZ goes down then our other AZ our app work:
+
+![image](https://github.com/user-attachments/assets/b75e062c-a2db-4789-8588-b5607a4c0665)
 
 
 Here for worker node our local laptop Public key is attached because we use  "--ssh-access" and i can access Cluster node instance from local machine and manage.
@@ -283,3 +282,13 @@ Here for worker node our local laptop Public key is attached because we use  "--
 
 ![Screenshot 2024-08-07 111122](https://github.com/user-attachments/assets/e497de17-2078-42df-b9d0-ae29fedd7ce3)
 
+
+
+  # Step 9: (Delete entire cluster in one command)
+
+  AWS EKS master node all monitoring activity ,If we want delete entire cluster then we use only one following command:
+
+  
+          eksctl delete cluster --name pscluster  --region ap-south-1
+
+![image](https://github.com/user-attachments/assets/9bc33310-8975-4384-af36-758ca140b460)
