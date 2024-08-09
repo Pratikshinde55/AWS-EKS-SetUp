@@ -278,7 +278,8 @@ Here for worker node our local laptop Public key is attached because we use  "--
 
     # ssh ec2-user@(Public_IP)
 
-![Screenshot 2024-08-07 111041](https://github.com/user-attachments/assets/5a489355-5513-469a-8611-aa0e092d5e88)
+![Screenshot 2024-08-09 135718](https://github.com/user-attachments/assets/697b3fef-1ad3-462f-b2f4-361203db57b6)
+
 
 ![image](https://github.com/user-attachments/assets/d1de79b5-565b-45fd-82bd-ab4c26c3369e)
 
