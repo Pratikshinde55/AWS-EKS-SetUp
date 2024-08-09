@@ -284,6 +284,15 @@ Here for worker node our local laptop Public key is attached because we use  "--
 ![image](https://github.com/user-attachments/assets/d1de79b5-565b-45fd-82bd-ab4c26c3369e)
 
 
+- Load Balancer created:
+
+
+![image](https://github.com/user-attachments/assets/58e25c91-309f-4a82-84d1-5ed13acd3e0f)
+
+- VPC also created by EKS automatic(VPC give IP range subnet for our node,pod)
+
+![image](https://github.com/user-attachments/assets/98a080c8-4a88-4360-b1cc-a3c91ad0467a)
+
 
 
   # Step 9: (Delete entire cluster in one command)
