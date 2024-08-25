@@ -43,7 +43,7 @@ we use "eksctl" to create eks cluster we need following things:
  6. AWS Console check(Cluster is created checking on aws console-->>EKS)
  
     
-# Step 1: (Create IAM user on aws)
+### Step 1: (Create IAM user on aws)
 
  Go to aws console and create IAM user which is used for Authentication:
 
