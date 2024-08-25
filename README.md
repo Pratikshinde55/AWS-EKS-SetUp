@@ -68,7 +68,7 @@ we get Retrieve access key:
 ![Screenshot 2024-08-06 173818](https://github.com/user-attachments/assets/5a4925c5-abf9-4af8-86d5-6c2098ff0b21)
 
 
-# Step 2: (AWS CLI on local laptpton/ Authentication)
+### Step 2: (AWS CLI on local laptpton/ Authentication)
 
 Search on google -->> "aws cli install window" -->> download AWS CLI for window (64-bit)
 
@@ -86,7 +86,7 @@ paste access key of IAM user:
 
   This aws cli tool help us to connect with aws and use aws services from laptop/Local machine.
   
-# Step 3: (Download eksctl tool)
+### Step 3: (Download eksctl tool)
 
 eksctl is third party tool to manage EKS.
 
@@ -125,7 +125,7 @@ Now on command prompt/ GitBash we can check by using command :
 "eksctl" tool helps to connect with master through "kubeAPI" but we Master node is fully managed by aws.
 
 
-# Step 4: (Download Kubectl on loptop)
+### Step 4: (Download Kubectl on loptop)
 
 Search on browser 'kubectl install window' -->> 'Install kubectl binary with curl on Windows '  -->> copy command and paste on local system .
 
@@ -142,7 +142,7 @@ we can check using command:
 ![image](https://github.com/user-attachments/assets/3de88275-e6cd-4816-9890-45e82d4bccc6)
 
 
-# Step 5: (Create EKS Cluster)
+### Step 5: (Create EKS Cluster)
 
 For creating Cluster we use "eksctl" command and for doing anything inside cluster we use "kubectl" command.
 
@@ -160,7 +160,7 @@ Create kubernetes cluster we use help command for showing option:
 ![image](https://github.com/user-attachments/assets/f081c271-e3bc-467a-ab9b-e33d7d6247d6)
 
 
-# Step 6: (Create pod using docker image)
+### Step 6: (Create pod using docker image)
 
 If we want to launch OS, Server, App then that entire Software we bundle in one box or software called as "Image"  and that image in Container world called as "Container Image".
 
@@ -199,7 +199,7 @@ Command:
   ![image](https://github.com/user-attachments/assets/8e9ac95d-d0b9-4162-9870-fd033a096589)
 
 
-# Step 7:(use Load balancer and access webapp from outside world)
+### Step 7:(use Load balancer and access webapp from outside world)
 
   - Note:
 
@@ -259,7 +259,7 @@ Paste "EXTERNAL-IP" that get from "kubectl get svc" command and we access our ps
 
 
 
-# Step 8: (AWS console check)
+### Step 8: (AWS console check)
 
 now check on aws console our cluster creates: aws Dashbord-->> EKS
 
@@ -301,7 +301,7 @@ Here for worker node our local laptop Public key is attached because we use  "--
 
 
 
-  # Step 9: (Delete entire cluster in one command)
+  ### Step 9: (Delete entire cluster in one command)
 
   AWS EKS master node all monitoring activity ,If we want delete entire cluster then we use only one following command:
 
