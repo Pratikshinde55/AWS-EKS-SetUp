@@ -261,9 +261,9 @@ EC2 worker node also created:
 ![image](https://github.com/user-attachments/assets/b75e062c-a2db-4789-8588-b5607a4c0665)
 
 
-Here for worker node our local laptop Public key is attached because we use  "--ssh-access" and i can access Cluster node instance from local machine and manage.
+Here, for worker node our local laptop Public key is attached because we use  "--ssh-access" and i can access Cluster node instance from local machine and manage.
 
-   ssh ec2-user@(Public_IP)
+     ssh ec2-user@(Public_IP)
 
 ![Screenshot 2024-08-09 135718](https://github.com/user-attachments/assets/697b3fef-1ad3-462f-b2f4-361203db57b6)
 
