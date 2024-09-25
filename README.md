@@ -9,17 +9,14 @@ kubernetes is Container cluster management tool.
 
 EKS also have multi master node setup.
 
-- control plane:
+#### control plane:
+*In Master node of Kubernetes there are differents program run (Kube-schedular, KubeAPI, etcd) which control the kubernetes cluster nodes is termed as 'Control plane'.*
 
- *In Master node of Kubernetes there are differents program run (Kube-schedular, KubeAPI, etcd) which control the kubernetes cluster nodes is termed as 'Control plane'.*
+#### Master Node:
+*Amazon EKS the master node is fully managed by AWS Cloud.*
 
- - Master Node:
-
- *Amazon EKS the master node is fully managed by AWS Cloud.*
-
--  worker node:
-
- *The Worker node is not fully managed by AWS.*
+#### worker node:
+*The Worker node is not fully managed by AWS.*
 
 - Note:
 
