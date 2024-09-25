@@ -185,38 +185,37 @@ We can also direct connect to POD (Container) from laptop:
   ![image](https://github.com/user-attachments/assets/8e9ac95d-d0b9-4162-9870-fd033a096589)
 
 
-### Step 7:(use Load balancer and access webapp from outside world)
+### Step-7: [use Load balancer and access Webapp from outside world]
 
-  - Note:
+- Note:
+Kubernetes have their own load balancer, but if we want to use other load balancer then plugin need for "vanilla kubernetes" but while using "amazon EKS" give 
+precreated plugin for using aws services like Load balancer(ELB).
 
-    Kubernetes have their own load balancer, but if we want to use other load balancer then plugin need for "vanilla kubernetes" but while using "amazon EKS" give precreated plugin for using
-    aws services like Load balancer(ELB).
-
- Command for get Load Balancer list:
+Command for get Load Balancer list:
     
-         kubectl get svc
+    kubectl get svc
 
-  ![image](https://github.com/user-attachments/assets/997d958f-fddb-4105-9888-8d3f8583e2a8)
+![image](https://github.com/user-attachments/assets/997d958f-fddb-4105-9888-8d3f8583e2a8)
 
- Command for check create load balancer/expose deployment option:
+Command for check create load balancer/expose deployment option:
 
-         kubectl expose deployment --help
+    kubectl expose deployment --help
 
- Command for Create LB:
+Command for Create LB:
 
-         kubectl expose deployment psapp --name pslb --type=LoadBalancer --port 80
+    kubectl expose deployment psapp --name pslb --type=LoadBalancer --port 80
 
  ![image](https://github.com/user-attachments/assets/2d468bb1-0de9-4adb-9065-da9919386bfa)
 
- After creating load balancer we get "EXTERNAL-IP" that we can use as link on browser:
+After creating load balancer we get "EXTERNAL-IP" that we can use as link on browser:
 
-          kubectl get svc
+    kubectl get svc
 
 - Note:
      
 Kubernetes give us fantastic option that "Scale", by using horizontal Scaling we can scale-out and scale-in our deployment:
 
-       kubectl scale deployment psapp --replicas=4
+    kubectl scale deployment psapp --replicas=4
        
 ![image](https://github.com/user-attachments/assets/90ef6965-6e34-4e5f-8317-1c80a0d325df)
 
@@ -232,7 +231,7 @@ Paste "EXTERNAL-IP" that get from "kubectl get svc" command and we access our ps
 
 - Note:
 
-   From below screenshoot we can see that our load balancer work, every time we connect new pod: 
+From below screenshoot we can see that our load balancer work, every time we connect new pod: 
 
 ![image](https://github.com/user-attachments/assets/370e8407-98d7-416a-bfbb-90e83f172d95)
 
@@ -245,7 +244,7 @@ Paste "EXTERNAL-IP" that get from "kubectl get svc" command and we access our ps
 
 
 
-### Step 8: (AWS console check)
+### Step-8: [AWS console check]
 
 now check on aws console our cluster creates: aws Dashbord-->> EKS
 
@@ -264,7 +263,7 @@ EC2 worker node also created:
 
 Here for worker node our local laptop Public key is attached because we use  "--ssh-access" and i can access Cluster node instance from local machine and manage.
 
-    # ssh ec2-user@(Public_IP)
+   ssh ec2-user@(Public_IP)
 
 ![Screenshot 2024-08-09 135718](https://github.com/user-attachments/assets/697b3fef-1ad3-462f-b2f4-361203db57b6)
 
@@ -285,13 +284,9 @@ Here for worker node our local laptop Public key is attached because we use  "--
 
 ![image](https://github.com/user-attachments/assets/98a080c8-4a88-4360-b1cc-a3c91ad0467a)
 
-
-
-  ### Step 9: (Delete entire cluster in one command)
-
-  AWS EKS master node all monitoring activity ,If we want delete entire cluster then we use only one following command:
-
-  
-          eksctl delete cluster --name pscluster  --region ap-south-1
+### Step-9: [Delete entire cluster in one command]
+AWS EKS master node all monitoring activity ,If we want delete entire cluster then we use only one following command:
+     
+     eksctl delete cluster --name pscluster  --region ap-south-1
 
 ![image](https://github.com/user-attachments/assets/9bc33310-8975-4384-af36-758ca140b460)
