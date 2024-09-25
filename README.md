@@ -9,7 +9,7 @@ kubernetes is Container cluster management tool.
 
 EKS also have multi master node setup.
 
-#### control plane:
+#### Control plane:
 *In Master node of Kubernetes there are differents program run (Kube-schedular, KubeAPI, etcd) which control the kubernetes cluster nodes is termed as 'Control plane'.*
 
 #### Master Node:
@@ -38,13 +38,12 @@ Use "eksctl" to create eks cluster we need following things:
  6. AWS Console check(Cluster is created checking on aws console-->>EKS)
  
     
-### Step 1: (Create IAM user on aws)
-
- Go to aws console and create IAM user which is used for Authentication:
+### Step-1: [Create IAM user on aws]
+Go to aws console and create IAM user which is used for Authentication:
 
  ![Screenshot 2024-08-06 173532](https://github.com/user-attachments/assets/154dc5ed-359e-4cef-b7d1-60b22f2080f4)
 
-Now attach policy and create new user:
+Now **attach policy** and create new user:
 
 ![Screenshot 2024-08-06 173631](https://github.com/user-attachments/assets/2cffdb97-a6f4-4485-be21-9fedf99d9bd7)
 
@@ -52,34 +51,32 @@ Now click on created user:
 
 ![Screenshot 2024-08-06 173654](https://github.com/user-attachments/assets/013a3297-fbae-45b5-be09-87ef0e5f23c0)
 
-Now click " security credentials" and creare access key:
+Now click **"security credentials"** and creare access key:
 
 ![Screenshot 2024-08-06 173727](https://github.com/user-attachments/assets/5a5c7c92-c5f3-435e-b498-5774cf4e3cc9)
 
 ![Screenshot 2024-08-06 173751](https://github.com/user-attachments/assets/4d92bc58-e998-4961-8852-62413dc336bb)
 
-we get Retrieve access key:
+Retrieve **access key**:(Copy key)
 
 ![Screenshot 2024-08-06 173818](https://github.com/user-attachments/assets/5a4925c5-abf9-4af8-86d5-6c2098ff0b21)
 
 
-### Step 2: (AWS CLI on local laptpton/ Authentication)
+### Step-2: [AWS CLI on local laptpton/ Authentication]
 
-Search on google -->> "aws cli install window" -->> download AWS CLI for window (64-bit)
+Search on google -->> "AWS CLI install window" -->> download AWS CLI for window (64-bit)
 
-command for checking aws cli work on prompt/ GitBash:
+Command for checking AWS CLI work on prompt/ GitBash:
 
-       aws --version
+    aws --version
 
-paste access key of IAM user:
+Paste access key of IAM user:
 
-      aws configure
+    aws configure
 
 ![image](https://github.com/user-attachments/assets/5809837a-b043-4564-9521-06d81cbd5d90)
 
-- Note :
-
-  This aws cli tool help us to connect with aws and use aws services from laptop/Local machine.
+**This AWS CLI tool help us to connect with AWS and use AWS Services from laptop/Local machine.
   
 ### Step 3: (Download eksctl tool)
 
