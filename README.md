@@ -78,13 +78,13 @@ Paste access key of IAM user:
 
 **This AWS CLI tool help us to connect with AWS and use AWS Services from laptop/Local machine.
   
-### Step 3: (Download eksctl tool)
+### Step 3: [Download eksctl tool]
 
-eksctl is third party tool to manage EKS.
+**eksctl is third party tool to manage EKS.**
 
 Search on browser "eksctl" open link and right side of link give GitHub repo link click ,
 
-(link- https://github.com/eksctl-io/eksctl/releases/tag/v0.188.0)
+[eksctl-download-link](https://github.com/eksctl-io/eksctl/releases/tag/v0.188.0)
 
 ![Screenshot 2024-08-06 175713](https://github.com/user-attachments/assets/ab03f6fb-8236-445c-89ae-dc47e9844472)
 
