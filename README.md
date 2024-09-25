@@ -173,21 +173,19 @@ We can also direct connect to POD (Container) from laptop:
 
     kubectl exec -it psapp bash
 
-- Note:
+#### kubelet:
+*Master node keeps on monitoring "pod" because there is a program running in "worker node" who communicates with master that program is known as **"kubelet"**, 
+This is also managed by EKS.*
 
-  Master node keeps on monitoring "pod" because there is a program running in "worker node" who communicates with master that program is known as "kubelet", 
-  This is also managed by EKS.
+#### kube-schedular:
+*If we delete pod or any fault occures and pod goes down then Master node automatically launch same pod at any node, at any node means master **kube-schedular** 
+program keep on monitoring on worker node which is free, that node use for launch pod.*
 
-  If we delete pod or any fault occures and pod goes down then Master node automatically launch same pod at any node, at any node means master kube-schedular 
-  program keep 
-  on monitoring on worker node which is free, that node use for launch pod.
-
-  ![image](https://github.com/user-attachments/assets/8e9ac95d-d0b9-4162-9870-fd033a096589)
+![image](https://github.com/user-attachments/assets/8e9ac95d-d0b9-4162-9870-fd033a096589)
 
 
 ### Step-7: [use Load balancer and access Webapp from outside world]
 
-- Note:
 Kubernetes have their own load balancer, but if we want to use other load balancer then plugin need for "vanilla kubernetes" but while using "amazon EKS" give 
 precreated plugin for using aws services like Load balancer(ELB).
 
@@ -205,15 +203,13 @@ Command for Create LB:
 
     kubectl expose deployment psapp --name pslb --type=LoadBalancer --port 80
 
- ![image](https://github.com/user-attachments/assets/2d468bb1-0de9-4adb-9065-da9919386bfa)
+![image](https://github.com/user-attachments/assets/2d468bb1-0de9-4adb-9065-da9919386bfa)
 
 After creating load balancer we get "EXTERNAL-IP" that we can use as link on browser:
 
     kubectl get svc
-
-- Note:
      
-Kubernetes give us fantastic option that "Scale", by using horizontal Scaling we can scale-out and scale-in our deployment:
+**Kubernetes give us fantastic option that "Scale", by using horizontal Scaling we can scale-out and scale-in our deployment:**
 
     kubectl scale deployment psapp --replicas=4
        
