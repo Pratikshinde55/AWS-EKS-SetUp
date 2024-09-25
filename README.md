@@ -1,31 +1,29 @@
-
+# Elastic Kubernetes Service(EKS):
 kubernetes is Container cluster management tool.
 
- # Elastic Kubernetes Service(EKS):
+**Amazon EKS is Kubernetes cluster management service.** 
 
-Amazon EKS is Kubernetes cluster management service. 
+**Elastic Kubernetes Service(EKS) give fault tolerance(FT) means if something fail, Kubernetes master automatic launch Container.**
 
- Elastic Kubernetes Service(EKS) give fault tolerance(FT) means if something fail, Kubernetes master automatic launch Container.
+**EKS give seamless facility.**
 
- EKS give seamless facility.
-
- EKS also have multi master node setup.
+EKS also have multi master node setup.
 
 - control plane:
 
- In Master node of Kubernetes there are differents program run (Kube-schedular, KubeAPI, etcd) which control the kubernetes cluster nodes is termed as 'Control plane'.
+ *In Master node of Kubernetes there are differents program run (Kube-schedular, KubeAPI, etcd) which control the kubernetes cluster nodes is termed as 'Control plane'.*
 
  - Master Node:
 
- Amazon EKS the master node is fully managed by aws cloud .
+ *Amazon EKS the master node is fully managed by AWS Cloud.*
 
 -  worker node:
 
- The worker node is not fully managed by aws.
+ *The Worker node is not fully managed by AWS.*
 
 - Note:
 
-we can create EKS cluster :-
+We can create EKS cluster :-
  1. webUI
  2. terraForm
  3. eksctl
@@ -34,7 +32,7 @@ we can create EKS cluster :-
 
 -  SetUp:
 
-we use "eksctl" to create eks cluster we need following things:
+Use "eksctl" to create eks cluster we need following things:
  1. IAM user (Create IAM user to access AWS EKS)
  2. AWS cli (on local laptop for aws Authentication)
  3. eksctl tool on local machine(Create Eks cluster).
