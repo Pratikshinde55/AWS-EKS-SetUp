@@ -117,33 +117,30 @@ Now on command prompt/ GitBash we can check by using command :
 "eksctl" tool helps to connect with master through "kubeAPI" but we Master node is fully managed by aws.
 
 
-### Step 4: (Download Kubectl on loptop)
+### Step-4: [Download Kubectl on loptop]
 
-Search on browser 'kubectl install window' -->> 'Install kubectl binary with curl on Windows '  -->> copy command and paste on local system .
+Search on browser 'kubectl install window' -->> 'Install kubectl binary with curl on Windows '  -->> copy command and paste on local system.
 
-(link-https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/ )
-
-
-       curl.exe -LO "https://dl.k8s.io/release/v1.30.0/bin/windows/amd64/kubectl.exe"
-
-we can check using command:
+[Kubectl-download-link](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/ )
     
+    curl.exe -LO "https://dl.k8s.io/release/v1.30.0/bin/windows/amd64/kubectl.exe"
+
+We can check using command:
     
-      kubectl version
+    kubectl version
       
 ![image](https://github.com/user-attachments/assets/3de88275-e6cd-4816-9890-45e82d4bccc6)
 
 
-### Step 5: (Create EKS Cluster)
+### Step-5: [Create EKS Cluster]
 
-For creating Cluster we use "eksctl" command and for doing anything inside cluster we use "kubectl" command.
+**For creating Cluster we use "eksctl" command and for doing anything inside cluster we use "kubectl" command.**
 
 Create kubernetes cluster we use help command for showing option:
 
       eksctl create cluster --help
 
-
-- Now create cluster using option command:
+Create eks cluster using option command:
 
       eksctl create cluster  --name pscluster  --region ap-south-1  --version 1.30  --nodegroup-name psnodegp --instance-types t2.micro --nodes 3  --nodes-min 3  --nodes-max 6
        --node-volume-size 8  --node-volume-type gp3  --ssh-access   --enable-ssm --instance-name psworkernode  --managed
@@ -152,40 +149,38 @@ Create kubernetes cluster we use help command for showing option:
 ![image](https://github.com/user-attachments/assets/f081c271-e3bc-467a-ab9b-e33d7d6247d6)
 
 
-### Step 6: (Create pod using docker image)
+### Step-6: [Create pod using Docker image]
 
-If we want to launch OS, Server, App then that entire Software we bundle in one box or software called as "Image"  and that image in Container world called as "Container Image".
+If we want to launch OS, Server, App then that entire Software we bundle in one box or software called as "Image"  and that image in Container world called as 
+"Container Image".
 
-If we want to launch app/container/pod with help of image we use term as "deployment" in K8S world.
+**If we want to launch app/container/pod with help of image we use term as "deployment" in K8S world.**
 
-Command:
+Command for create deployment/container in AWS EKS:
+     
+    kubectl create deployment psapp --image=vimal13/apache-webserver-php
 
+We can check pods using kubectl command:
 
-       kubectl create deployment psapp --image=vimal13/apache-webserver-php
-
- we can check pods using kubectl command:
-
-       kubectl get pods 
+    kubectl get pods 
      
 ![image](https://github.com/user-attachments/assets/b4f836b2-97ec-4346-9cfd-a5d3ee6e78fa)
 
+We can check entire info of pods using command:
 
- we can check entire info of pods using command:
+    kubectl get pods -o wide
 
-       kubectl get pods -o wide
+We can also direct connect to POD (Container) from laptop:
 
- we can also direct connect to POD (Container) from laptop:
+    kubectl exec -it psapp bash
 
-       kubectl exec -it psapp bash
-
-
-
- - Note:
+- Note:
 
   Master node keeps on monitoring "pod" because there is a program running in "worker node" who communicates with master that program is known as "kubelet", 
   This is also managed by EKS.
 
-  If we delete pod or any fault occures and pod goes down then Master node automatically launch same pod at any node, at any node means master kube-schedular program keep 
+  If we delete pod or any fault occures and pod goes down then Master node automatically launch same pod at any node, at any node means master kube-schedular 
+  program keep 
   on monitoring on worker node which is free, that node use for launch pod.
 
   ![image](https://github.com/user-attachments/assets/8e9ac95d-d0b9-4162-9870-fd033a096589)
