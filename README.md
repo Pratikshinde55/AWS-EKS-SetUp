@@ -10,7 +10,8 @@ kubernetes is Container cluster management tool.
 EKS also have multi master node setup.
 
 #### Control plane:
-*In Master node of Kubernetes there are differents program run (Kube-schedular, KubeAPI, etcd) which control the kubernetes cluster nodes is termed as 'Control plane'.*
+*In Master node of Kubernetes there are differents program run (Kube-schedular, KubeAPI, etcd) which control the kubernetes cluster nodes is termed as Control 
+ plane.*
 
 #### Master Node:
 *Amazon EKS the master node is fully managed by AWS Cloud.*
@@ -76,7 +77,7 @@ Paste access key of IAM user:
 
 ![image](https://github.com/user-attachments/assets/5809837a-b043-4564-9521-06d81cbd5d90)
 
-**This AWS CLI tool help us to connect with AWS and use AWS Services from laptop/Local machine.
+**This AWS CLI tool help us to connect with AWS and use AWS Services from laptop/Local machine.**
   
 ### Step 3: [Download eksctl tool]
 
