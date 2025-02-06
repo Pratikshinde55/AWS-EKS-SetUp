@@ -171,6 +171,10 @@ We can check pods using kubectl command:
      
 ![image](https://github.com/user-attachments/assets/b4f836b2-97ec-4346-9cfd-a5d3ee6e78fa)
 
+To check nodes CPU and RAM:
+
+    kubectl top nodes
+
 We can check entire info of pods using command:
 
     kubectl get pods -o wide
