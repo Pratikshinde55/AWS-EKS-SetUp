@@ -166,6 +166,10 @@ We can check entire info of pods using command:
 
 We can also direct connect to POD (Container) from laptop:
 
+   kubectl exec -it myweb-59f99ddd48-kvnpv -- bash
+   
+Try Also this: 
+
     kubectl exec -it psapp bash
 
 ![image](https://github.com/user-attachments/assets/8e9ac95d-d0b9-4162-9870-fd033a096589)
