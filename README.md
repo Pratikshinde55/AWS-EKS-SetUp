@@ -13,10 +13,7 @@
 5. **kube-schedular:** If we delete pod or any fault occures and pod goes down then Master node automatically launch same pod at any node, at any node means master **kube-schedular**
 program keep on monitoring on worker node which is free, that node use for launch pod.
 
-
-- Note:
-
-We can create EKS cluster :-
+**We can create EKS cluster:-**
  1. webUI
  2. terraForm
  3. eksctl
