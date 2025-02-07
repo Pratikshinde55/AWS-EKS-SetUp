@@ -1,23 +1,18 @@
 # Elastic Kubernetes Service(EKS):
-kubernetes is Container cluster management tool.
+- kubernetes is Container cluster management tool.
+- **Amazon EKS is Kubernetes cluster management service.**
+- **Elastic Kubernetes Service(EKS) give fault tolerance(FT) means if something fail, Kubernetes master automatic launch Container.**
+- **EKS give seamless facility.**
+- **EKS also have multi master node setup.**
 
-**Amazon EKS is Kubernetes cluster management service.** 
+### EKS Main Component:
+1. **Control plane:** In Master node of Kubernetes there are differents program run (Kube-schedular, KubeAPI, etcd) which control the kubernetes cluster nodes is termed as Control plane.
+2. **Master Node:** Amazon EKS the master node is fully managed by AWS Cloud.
+3. **Worker node:** The Worker node is not fully managed by AWS.
+4. **kubelet:** Master node keeps on monitoring "pod" because there is a program running in "worker node" who communicates with master that program is known as **"kubelet"**, This is also managed by EKS.
+5. **kube-schedular:** If we delete pod or any fault occures and pod goes down then Master node automatically launch same pod at any node, at any node means master **kube-schedular**
+program keep on monitoring on worker node which is free, that node use for launch pod.
 
-**Elastic Kubernetes Service(EKS) give fault tolerance(FT) means if something fail, Kubernetes master automatic launch Container.**
-
-**EKS give seamless facility.**
-
-EKS also have multi master node setup.
-
-#### Control plane:
-*In Master node of Kubernetes there are differents program run (Kube-schedular, KubeAPI, etcd) which control the kubernetes cluster nodes is termed as Control 
- plane.*
-
-#### Master Node:
-*Amazon EKS the master node is fully managed by AWS Cloud.*
-
-#### worker node:
-*The Worker node is not fully managed by AWS.*
 
 - Note:
 
@@ -64,7 +59,6 @@ Retrieve **access key**:(Copy key)
 
 
 ### Step-2: [AWS CLI on local laptpton/ Authentication]
-
 Search on google -->> "AWS CLI install window" -->> download AWS CLI for window (64-bit)
 
 Command for checking AWS CLI work on prompt/ GitBash:
@@ -80,7 +74,6 @@ Paste access key of IAM user:
 **This AWS CLI tool help us to connect with AWS and use AWS Services from laptop/Local machine.**
   
 ### Step 3: [Download eksctl tool]
-
 **eksctl is third party tool to manage EKS.**
 
 Search on browser "eksctl" open link and right side of link give GitHub repo link click ,
@@ -155,11 +148,8 @@ To Check node group:
      eksctl get nodegroup --cluster pscluster --region ap-south-1
 
 ### Step-6: [Create pod using Docker image]
-
-If we want to launch OS, Server, App then that entire Software we bundle in one box or software called as "Image"  and that image in Container world called as 
-"Container Image".
-
-**If we want to launch app/container/pod with help of image we use term as "deployment" in K8S world.**
+- **If we want to launch OS, Server, App then that entire Software we bundle in one box or software called as "Image"  and that image in Container world called as "Container Image".**
+- **If we want to launch app/container/pod with help of image we use term as "deployment" in K8S world.**
 
 Command for create deployment/container in AWS EKS:
      
@@ -183,21 +173,12 @@ We can also direct connect to POD (Container) from laptop:
 
     kubectl exec -it psapp bash
 
-#### kubelet:
-*Master node keeps on monitoring "pod" because there is a program running in "worker node" who communicates with master that program is known as **"kubelet"**, 
-This is also managed by EKS.*
-
-#### kube-schedular:
-*If we delete pod or any fault occures and pod goes down then Master node automatically launch same pod at any node, at any node means master **kube-schedular** 
-program keep on monitoring on worker node which is free, that node use for launch pod.*
-
 ![image](https://github.com/user-attachments/assets/8e9ac95d-d0b9-4162-9870-fd033a096589)
 
 
 ### Step-7: [use Load balancer and access Webapp from outside world]
-
-Kubernetes have their own load balancer, but if we want to use other load balancer then plugin need for "vanilla kubernetes" but while using "amazon EKS" give 
-precreated plugin for using aws services like Load balancer(ELB).
+**Kubernetes have their own load balancer, but if we want to use other load balancer then plugin need for "vanilla kubernetes" but while using "amazon EKS" give 
+precreated plugin for using aws services like Load balancer(ELB).**
 
 Command for get Load Balancer list:
     
@@ -225,13 +206,13 @@ After creating load balancer we get "EXTERNAL-IP" that we can use as link on bro
        
 ![image](https://github.com/user-attachments/assets/90ef6965-6e34-4e5f-8317-1c80a0d325df)
 
-we can also see on which "node" our pod from CLI:
+We can also see on which "node" our pod from CLI:
 
        kubectl get pods -o wide
 
 ![image](https://github.com/user-attachments/assets/6169c8c3-390a-4df8-a463-b102976c0e69)
        
-we can see our Elastic Load balancer "EXTERNAL-IP" to access our psapp(pod/container):
+We can see our Elastic Load balancer "EXTERNAL-IP" to access our psapp(pod/container):
 
 Paste "EXTERNAL-IP" that get from "kubectl get svc" command and we access our psapp through loadBalancer:
 
@@ -247,25 +228,19 @@ From below screenshoot we can see that our load balancer work, every time we con
 
 ![image](https://github.com/user-attachments/assets/da55b55e-01f7-4e8c-a0d6-144a261540d6)
 
-
-
-
 ### Step-8: [AWS console check]
-
-now check on aws console our cluster creates: aws Dashbord-->> EKS
+Now check on aws console our cluster creates: aws Dashbord-->> EKS
 
 ![image](https://github.com/user-attachments/assets/49c48de1-8b2c-4904-a9c3-a1a01182196a)
-
 
 EC2 worker node also created:
 
   - Note:
 
-  Here we can see that our instances lanuch at different " availability zones" because we use "nodegroup" while creating Cluster, EKS is very intelligent, every node launch in differnt AZ 
-  because i any AZ goes down then our other AZ our app work:
+  **Here we can see that our instances lanuch at different " availability zones" because we use "nodegroup" while creating Cluster, EKS is very intelligent, every node launch in differnt AZ 
+  because i any AZ goes down then our other AZ our app work:**
 
 ![image](https://github.com/user-attachments/assets/b75e062c-a2db-4789-8588-b5607a4c0665)
-
 
 Here, for worker node our local laptop Public key is attached because we use  "--ssh-access" and i can access Cluster node instance from local machine and manage.
 
@@ -273,24 +248,19 @@ Here, for worker node our local laptop Public key is attached because we use  "-
 
 ![Screenshot 2024-08-09 135718](https://github.com/user-attachments/assets/697b3fef-1ad3-462f-b2f4-361203db57b6)
 
-
 ![image](https://github.com/user-attachments/assets/d1de79b5-565b-45fd-82bd-ab4c26c3369e)
 
-
 - Load Balancer created:
-
 
 ![image](https://github.com/user-attachments/assets/58e25c91-309f-4a82-84d1-5ed13acd3e0f)
 
 - VPC also created by EKS automatic(VPC give IP range subnet for our node,pod):
-
-  AWS has its own personal plugin called "VPC" that is used for K8S by EKS.
-
-  every VPC has subnets and every subnet gives IP adress range.
+- AWS has its own personal plugin called "VPC" that is used for K8S by EKS.
+- Every VPC has subnets and every subnet gives IP adress range.
 
 ![image](https://github.com/user-attachments/assets/98a080c8-4a88-4360-b1cc-a3c91ad0467a)
 
-### Step-9: [Delete entire cluster in one command]
+### Step-9: [Delete entire EKS Cluster in one command]
 AWS EKS master node all monitoring activity ,If we want delete entire cluster then we use only one following command:
      
      eksctl delete cluster --name pscluster  --region ap-south-1
